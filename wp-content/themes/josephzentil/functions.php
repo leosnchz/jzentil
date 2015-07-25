@@ -67,6 +67,9 @@ add_action( 'wp_enqueue_scripts', 'naked_scripts' ); // Register this fxn and al
         ),
       'description' => 'Photos by Joseph Zentil',
       'hierarchical' => false,
+			'taxonomies' => array(
+				'category'
+			),
       'show_in_menu' => true,
       'show_in_nav_menus' => true,
       'show_in_admin_bar' => true,
