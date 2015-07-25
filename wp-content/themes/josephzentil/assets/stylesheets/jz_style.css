@@ -65,6 +65,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 3, ../sass/_style.sass */
+header {
+  padding-top: 20px;
+}
+
 /*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
@@ -737,5 +742,22 @@ there.
 /* Larger than Desktop HD */
 /* line 3, ../sass/_typography.sass */
 body {
-  font-family: "EB Garamond", serif;
+  font-family: "adobe-caslon-pro", serif;
+  color: #000000;
+}
+
+/* line 8, ../sass/_typography.sass */
+a:link, a:visited {
+  color: #333333;
+  text-decoration: none;
+}
+
+/* line 13, ../sass/_typography.sass */
+#brand {
+  text-align: center;
+}
+/* line 17, ../sass/_typography.sass */
+#brand h1 a:link, #brand h1 a:visited {
+  text-decoration: none;
+  font-size: 26px;
 }
