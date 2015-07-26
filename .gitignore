@@ -1,4 +1,5 @@
 wp-config.php
 .htaccess
 wp-content/languages
+wp-content/uploads
 wp-admin/install.php
