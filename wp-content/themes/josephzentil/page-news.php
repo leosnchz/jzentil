@@ -7,19 +7,8 @@ get_header();?>
 
 					<article class="post">
 
-						<?php if (!is_front_page()) : // Only if this page is NOT being used as a home page, display the title ?>
-							<h1 class='title'>
-								<?php the_title(); // Display the page title ?>
-							</h1>
-						<?php endif; ?>
-
 						<div class="the-content">
-							<?php the_content();
-							// This call the main content of the page, the stuff in the main text box while composing.
-							// This will wrap everything in paragraph tags
-							?>
-
-							<?php wp_link_pages(); // This will display pagination links, if applicable to the page ?>
+							<?php do_shortcode('[tumblr_blog blog_url="YOUR_TUMBLR_BLOG_URL" api_key="YOUR_TUMBLR_API_KEY"]'); ?>
 						</div><!-- the-content -->
 
 					</article>
@@ -34,8 +23,5 @@ get_header();?>
 
 			<?php endif; // OK, I think that takes care of both scenarios (having a page or not having a page to show) ?>
 		</div><!-- #content .site-content -->
-		<div id="sidebar" role="sidebar" class="span4">
-			<?php get_sidebar(); // This will display whatever we have written in the sidebar.php file, according to admin widget settings ?>
-		</div><!-- #sidebar -->
 	</div><!-- #container .content-area -->
 <?php get_footer(); // This fxn gets the footer.php file and renders it ?>
