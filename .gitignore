@@ -2,3 +2,4 @@ wp-config.php
 .htaccess
 wp-content/languages
 wp-admin/install.php
+wp-content/uploads
