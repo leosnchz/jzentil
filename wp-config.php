@@ -19,13 +19,13 @@
 define('DB_NAME', 'bitnami_wordpress');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'bn_wordpress');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'thisisme');
+define('DB_PASSWORD', '0327ba65ee');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'localhost:3306');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -79,8 +79,8 @@ define('WP_DEBUG', false);
  *
 */
 
-define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/wordpress/jzentil');
-define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/wordpress/jzentil');
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/wordpress');
+define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/wordpress');
 
 
 /** Absolute path to the WordPress directory. */
@@ -89,3 +89,5 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+define('WP_TEMP_DIR', '/Applications/XAMPP/xamppfiles/apps/wordpress/tmp');

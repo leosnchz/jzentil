@@ -70,6 +70,30 @@ header {
   padding-top: 20px;
 }
 
+/* line 9, ../sass/_style.sass */
+nav {
+  display: table;
+  margin: 0 auto;
+}
+/* line 12, ../sass/_style.sass */
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 15, ../sass/_style.sass */
+nav li {
+  display: inline;
+}
+/* line 18, ../sass/_style.sass */
+nav a:link, nav a:visited {
+  margin: 0 15px;
+  color: #000000;
+}
+/* line 21, ../sass/_style.sass */
+nav a:hover, nav a:active, nav a:focus {
+  text-decoration: underline;
+}
+
 /*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
