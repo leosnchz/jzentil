@@ -111,6 +111,3 @@ function galleries_sidebar(){
   ));
 }
 add_action( 'widgets_init', 'galleries_sidebar' );
-
-//widgets
-	include_once('widgets/galleries.php');
