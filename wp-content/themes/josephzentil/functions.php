@@ -101,3 +101,16 @@ add_action( 'wp_enqueue_scripts', 'naked_scripts' ); // Register this fxn and al
   	}
   }
   add_action('admin_menu', 'remove_menus');
+
+function galleries_sidebar(){
+	register_sidebar(array(
+    'name' => __( 'Galleries Sidebar' ),
+    'id' => 'galleries',
+		'before_widget' => '<aside id="%1$s" class="col-md-2 %2$s">',
+		'after_widget' => '</aside>'
+  ));
+}
+add_action( 'widgets_init', 'galleries_sidebar' );
+
+//widgets
+	include_once('widgets/galleries.php');
