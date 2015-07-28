@@ -19,22 +19,19 @@ $count = 0;
 
 get_sidebar('galleries'); ?>
 <!-- temporary stylesheet for visual -->
-  <div class="row">
+<div class="container">
     <ul class="photo-gallery">
     <?php foreach($photos as $photo) :
       $count ++;
       $img_src = wp_get_attachment_image_src((int)get_post_meta($photo->ID)['photo'][0], 'medium')[0];
-
       ?>
-      <li class="columns two">
-        <a href="<?php echo $photo->guid; ?>">
-          <img src="<?php echo $img_src; ?>" >
-        </a>
-      </li>
-      <?php if ( $count % 4 == 0 ) echo '<div class="clearfix"></div>'; ?>
+        <li class="columns three">
+            <a href="<?php echo $photo->guid; ?>">
+            <img src="<?php echo $img_src; ?>" >
+            </a>
+        </li>
     <?php endforeach; ?>
 
     </ul>
-  </div>
-<div class="clearfix"></div>
+</div>
 <?php get_footer(); ?>

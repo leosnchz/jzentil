@@ -65,4 +65,4 @@
 
 </header><!-- #masthead .site-header -->
 
-<div class="main-fluid"><!-- start the page containter -->
+<main><!-- start the page containter -->

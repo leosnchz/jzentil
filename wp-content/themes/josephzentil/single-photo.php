@@ -4,7 +4,9 @@ get_header();
 $image = get_field('photo');
 
 ?>
-
-<img src="<?php echo $image['url']; ?>" />
-
+<section class="container">
+    <div class="photo">
+        <img src="<?php echo $image['url']; ?>" />
+    </div>
+</section>
 <?php get_footer(); ?>
