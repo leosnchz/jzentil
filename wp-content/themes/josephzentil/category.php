@@ -18,7 +18,6 @@ $count = 0;
 
 get_sidebar('galleries'); ?>
 <!-- temporary stylesheet for visual -->
-<link rel="stylesheet" href="http://josephzentil.leonardo-sanchez.com/html/assets/stylesheets/screen.css" />
 <div class="col-md-10">
   <div class="row">
     <div class="col-md-6">

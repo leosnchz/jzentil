@@ -106,8 +106,9 @@ function galleries_sidebar(){
 	register_sidebar(array(
     'name' => __( 'Galleries Sidebar' ),
     'id' => 'galleries',
-		'before_widget' => '<aside id="%1$s" class="col-md-2 %2$s">',
-		'after_widget' => '</aside>'
+		'before_widget' => '<div id="%1$s" class="container %2$s">',
+		'after_widget' => '</div>'
   ));
 }
+
 add_action( 'widgets_init', 'galleries_sidebar' );
