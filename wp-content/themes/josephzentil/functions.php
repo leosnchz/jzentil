@@ -91,6 +91,18 @@ add_action( 'wp_enqueue_scripts', 'naked_scripts' ); // Register this fxn and al
   add_action( 'init', 'create_gallery_post' );
 
 
+	function my_post_queries( $query ) {
+	  // not an admin page and it is the main query
+	  if (!is_admin() && $query->is_main_query()){
+	    if(is_category()){
+	      $query->set('posts_per_page', 1);
+				$query->set('post_type', 'photo');
+	    }
+	  }
+	}
+	add_action( 'pre_get_posts', 'my_post_queries' );
+
+
   function remove_menus () {
   global $menu;
   	$restricted = array(__('Posts'),  __('Comments'));
