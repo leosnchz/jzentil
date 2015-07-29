@@ -14,9 +14,6 @@ $args = array(
 $photos = new WP_QUERY($args);
 $count = 0;
 
-// var_dump($photos);
-// var_dump(get_post_meta(9));
-
 get_sidebar('galleries'); ?>
 <!-- temporary stylesheet for visual -->
 <link rel="stylesheet" href="http://josephzentil.leonardo-sanchez.com/html/assets/stylesheets/screen.css" />
@@ -51,8 +48,6 @@ get_sidebar('galleries'); ?>
 
     </ul>
   </div>
-</div>
-<div class="clearfix"></div>
 <?php
 wp_reset_postdata();
 get_footer();

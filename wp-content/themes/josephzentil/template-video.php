@@ -1,14 +1,26 @@
-<?php /* Template Name: VIDEO GALLERY */ ?>
+<?php /* Template Name: Video Gallery */ ?>
 
-<?php get_header();?>
+<?php get_header(); ?>
 
 
 <?php
-query_posts('video');
-while (have_posts()) : the_post();
-the_content();
-endwhile;
+$args = array('post_type' => 'video');
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post();
 ?>
 
+<div class="container">
+    <ul class="video-gallery">
+        <li class="columns four">
+            <a href='<?php echo get_permalink(); ?>'>
+            <span>
+            <?php the_title(); ?></span>
+            </a>
+        </li>
+    </ul>
+</div>
 
-<?php get_footer();?>
+</div>
+<?php endwhile;?>
+
+<?php get_footer(); ?>
