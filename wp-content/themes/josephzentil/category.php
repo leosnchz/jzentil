@@ -4,7 +4,7 @@ get_header();
 $cat_id = get_query_var('cat');
 $cat_name = get_query_var('category_name');
 $args = array(
-  'posts_per_page' => 12,
+  'posts_per_page' => 2,
   'cat' => $cat_id,
   'category_name' => $cat_name,
   'post_type' => 'photo',
@@ -48,6 +48,9 @@ get_sidebar('galleries'); ?>
 
     </ul>
   </div>
+</div>
+<div class="clearfix"></div>
+
 <?php
 wp_reset_postdata();
 get_footer();
