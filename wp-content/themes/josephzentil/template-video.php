@@ -1,26 +1,24 @@
-<?php /* Template Name: Video Gallery */ ?>
-
-<?php get_header(); ?>
-
-
-<?php
-$args = array('post_type' => 'video');
-$loop = new WP_Query( $args );
-while ( $loop->have_posts() ) : $loop->the_post();
+<?php /* Template Name: Video Gallery */
+// Create post object
 ?>
 
+<?php get_header(); ?>
 <div class="container">
-    <ul class="video-gallery">
-        <li class="columns four">
+    <div class="gallery">
+        <?php
+        $args = array('post_type' => 'video');
+        $loop = new WP_Query( $args );
+        while ( $loop->have_posts() ) : $loop->the_post();
+        ?>
+        <div class="gal-item">
             <a href='<?php echo get_permalink(); ?>'>
-            <span>
-            <?php the_title(); ?></span>
+                <img src="<?=get_vimeo_thumb( 'http//vimeo.com/' + get_field('video_id') , 'thumbnail_large');?>" />
+                <span><?php the_title(); ?></span>
             </a>
-        </li>
-    </ul>
-</div>
+        </div>
+        <?php endwhile;?>
+    </div>
 
 </div>
-<?php endwhile;?>
 
 <?php get_footer(); ?>

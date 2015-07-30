@@ -1,4 +1,4 @@
-<?php /* Template Name: PHOTO GALLERY */ ?>
+<?php /* Template Name: Photo Gallery */ ?>
 
 <?php get_header();
 
@@ -14,24 +14,22 @@ $args = array(
 $photos = get_posts($args);
 $count = 0;
 
-// var_dump($photos);
-// var_dump(get_post_meta(9));
-
 get_sidebar('galleries'); ?>
 <!-- temporary stylesheet for visual -->
 <div class="container">
-    <ul class="photo-gallery">
+    <div class="p-gallery">
     <?php foreach($photos as $photo) :
       $count ++;
-      $img_src = wp_get_attachment_image_src((int)get_post_meta($photo->ID)['photo'][0], 'medium')[0];
+      $img_src = wp_get_attachment_image_src((int)get_post_meta($photo->ID) ['photo'][0], 'medium')[0];
       ?>
-        <li class="columns three">
+        <div class="p-gal-item">
             <a href="<?php echo $photo->guid; ?>">
             <img src="<?php echo $img_src; ?>" >
             </a>
-        </li>
+        </div>
     <?php endforeach; ?>
 
-    </ul>
+    </div>
 </div>
+
 <?php get_footer(); ?>

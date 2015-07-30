@@ -8,7 +8,7 @@ get_header();?>
 					<article class="post">
 
 						<div class="the-content">
-							<?php do_shortcode('[tumblr_blog blog_url="YOUR_TUMBLR_BLOG_URL" api_key="YOUR_TUMBLR_API_KEY"]'); ?>
+							<?php do_shortcode('[tumblr_blog blog_url="jzentil.tumblr.com" api_key="YOUR_TUMBLR_API_KEY"]'); ?>
 						</div><!-- the-content -->
 
 					</article>

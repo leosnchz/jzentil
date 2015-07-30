@@ -81,8 +81,9 @@ add_action( 'wp_enqueue_scripts', 'naked_scripts' ); // Register this fxn and al
 	  'menu_icon' => 'dashicons-format-video',
       'rewrite' => array('slug' => 'Video')
     ));
+
   }
-  add_action( 'init', 'create_gallery_post' );
+	add_action( 'init', 'create_gallery_post' );
 
 
 	function my_post_queries( $query ) {
@@ -97,9 +98,39 @@ add_action( 'wp_enqueue_scripts', 'naked_scripts' ); // Register this fxn and al
 	add_action( 'pre_get_posts', 'my_post_queries' );
 
 
-  function remove_menus () {
+function create_development(){
+	register_post_type( 'Development', array(
+	  'labels' => array(
+	    'name' => __( 'Development' ),
+	    'singular_name' => __( 'Development' ),
+	    'all_items' => __( 'All Developments' ),
+	    'view_item' => __( 'DevelopmentDevelopment' ),
+	    'add_new_item' => __( 'Add New Development' ),
+	    'add_new' => __( 'Add New' ),
+	    'edit_item' => __( 'Edit Development' ),
+	    'update_item' => __( 'Update Development' ),
+	    'search_items' => __( 'Search Development' ),
+	    'not_found' => __( 'Development Not Found' ),
+	    'not_found_in_trash' => __( 'Development not found in trash' )
+	  ),
+	  'description' => 'Development by Joseph Zentil',
+	  'hierarchical' => false,
+	  'show_in_menu' => true,
+	  'show_in_nav_menus' => true,
+	  'show_in_admin_bar' => true,
+	  'public' => true,
+	  'has_archive' => false,
+	  'menu_position' => 6,
+	  'menu_icon' => 'dashicons-format-video',
+	  'rewrite' => array('slug' => 'development')
+	));
+}
+add_action( 'init', 'create_development' );
+
+
+ function remove_menus () {
   global $menu;
-  	$restricted = array(__('Posts'),  __('Comments'));
+  	$restricted = array(__('Comments'));
   	end ($menu);
   	while (prev($menu)){
   		$value = explode(' ',$menu[key($menu)][0]);
@@ -118,3 +149,18 @@ function galleries_sidebar(){
 }
 
 add_action( 'widgets_init', 'galleries_sidebar' );
+
+// Get And Cache Vimeo Thumbnails
+function get_vimeo_thumb($vURL, $size = 'thumbnail_small') {
+$pieces = explode("/", $vURL);
+$id = end($pieces);
+
+if(get_transient('vimeo_' . $size . '_' . $id)) {
+$thumb_image = get_transient('vimeo_' . $size . '_' . $id);
+} else {
+$json = json_decode(file_get_contents( "http://vimeo.com/api/v2/video/" . $id . ".json" ));
+$thumb_image = $json[0]->$size;
+set_transient('vimeo_' . $size . '_' . $id, $thumb_image, 2629743);
+}
+return $thumb_image;
+}
