@@ -80,32 +80,44 @@ main {
 }
 
 /* line 13, ../sass/_layout.sass */
+.col-12 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+/* line 89, ../neat/grid/_span-columns.scss */
+.col-12:last-child {
+  margin-right: 0;
+}
+
+/* line 16, ../sass/_layout.sass */
 .v-align-wrap {
   display: table;
   width: 100%;
   height: 100%;
 }
 
-/* line 18, ../sass/_layout.sass */
+/* line 21, ../sass/_layout.sass */
 .v-align-middle {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 23, ../sass/_layout.sass */
+/* line 26, ../sass/_layout.sass */
 .photo {
   text-align: center;
   width: 100%;
   height: 80%;
   margin-top: 20px;
 }
-/* line 27, ../sass/_layout.sass */
+/* line 30, ../sass/_layout.sass */
 .photo img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 31, ../sass/_layout.sass */
+/* line 34, ../sass/_layout.sass */
 .gallery {
   max-width: 68em;
   margin-left: auto;
@@ -117,7 +129,7 @@ main {
   content: "";
   display: table;
 }
-/* line 33, ../sass/_layout.sass */
+/* line 36, ../sass/_layout.sass */
 .gallery .gal-item {
   float: left;
   display: block;
@@ -137,12 +149,12 @@ main {
 .gallery .gal-item:nth-child(3n+1) {
   clear: left;
 }
-/* line 37, ../sass/_layout.sass */
+/* line 40, ../sass/_layout.sass */
 .gallery .gal-item img {
   width: 100%;
 }
 
-/* line 40, ../sass/_layout.sass */
+/* line 43, ../sass/_layout.sass */
 .p-gallery {
   max-width: 68em;
   margin-left: auto;
@@ -154,7 +166,7 @@ main {
   content: "";
   display: table;
 }
-/* line 42, ../sass/_layout.sass */
+/* line 45, ../sass/_layout.sass */
 .p-gallery .p-gal-item {
   float: left;
   display: block;
@@ -176,42 +188,42 @@ main {
 .p-gallery .p-gal-item:nth-child(3n+1) {
   clear: left;
 }
-/* line 48, ../sass/_layout.sass */
+/* line 51, ../sass/_layout.sass */
 .p-gallery .p-gal-item img {
   height: 100%;
 }
 
-/* line 51, ../sass/_layout.sass */
+/* line 54, ../sass/_layout.sass */
 .widget_categories {
   width: 100%;
   max-height: 1280px;
 }
-/* line 54, ../sass/_layout.sass */
+/* line 57, ../sass/_layout.sass */
 .widget_categories ul {
   display: table;
   margin: 0 auto;
   width: auto;
 }
-/* line 58, ../sass/_layout.sass */
+/* line 61, ../sass/_layout.sass */
 .widget_categories ul li {
   display: inline;
   padding: 0 10px;
 }
 
-/* line 62, ../sass/_layout.sass */
+/* line 65, ../sass/_layout.sass */
 .video-wrap {
   width: 85%;
   margin: 0 auto;
 }
 
-/* line 66, ../sass/_layout.sass */
+/* line 69, ../sass/_layout.sass */
 .video {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 25px;
   height: 0;
 }
-/* line 71, ../sass/_layout.sass */
+/* line 74, ../sass/_layout.sass */
 .video iframe {
   position: absolute;
   top: 0;
@@ -220,21 +232,21 @@ main {
   height: 100%;
 }
 
-/* line 78, ../sass/_layout.sass */
+/* line 81, ../sass/_layout.sass */
 .video-gallery {
   width: 100%;
 }
-/* line 80, ../sass/_layout.sass */
+/* line 83, ../sass/_layout.sass */
 .video-gallery img {
   width: 100%;
 }
-/* line 82, ../sass/_layout.sass */
+/* line 85, ../sass/_layout.sass */
 .video-gallery span {
   clear: both;
   line-height: 2.5;
 }
 
-/* line 86, ../sass/_layout.sass */
+/* line 89, ../sass/_layout.sass */
 .development {
   padding-bottom: 50px;
   margin-bottom: 50px;
@@ -251,27 +263,27 @@ main {
   content: "";
   display: table;
 }
-/* line 93, ../sass/_layout.sass */
+/* line 96, ../sass/_layout.sass */
 .development:last-child {
   border-bottom: 0;
 }
-/* line 96, ../sass/_layout.sass */
+/* line 99, ../sass/_layout.sass */
 .development .poster img {
   width: 100%;
 }
-/* line 98, ../sass/_layout.sass */
+/* line 101, ../sass/_layout.sass */
 .development .trailer {
   margin-bottom: 20px;
 }
 
-/* line 102, ../sass/_layout.sass */
+/* line 105, ../sass/_layout.sass */
 .wrap {
   display: table;
   vertical-align: bottom;
   height: inherit;
 }
 
-/* line 106, ../sass/_layout.sass */
+/* line 109, ../sass/_layout.sass */
 .bottom {
   display: table-cell;
   vertical-align: bottom;
