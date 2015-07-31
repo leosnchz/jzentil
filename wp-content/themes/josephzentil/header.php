@@ -34,16 +34,26 @@
 
 <script src="//use.typekit.net/kze2kxg.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
+<script type="JavaScript/text">
+$(document).ready(function() {
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
 
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+});
+
+</script>
 </head>
 
 <body
-	<?php body_class();
-	// This will display a class specific to whatever is being loaded by Wordpress
-	// i.e. on a home page, it will return [class="home"]
-	// on a single post, it will return [class="single postid-{ID}"]
-	// and the list goes on. Look it up if you want more.
-	?>
+	<?php body_class(); ?>
 >
 
 <header id="masthead" class="site-header" role="banner">

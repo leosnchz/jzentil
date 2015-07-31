@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
 /* line 4, ../neat/grid/_box-sizing.scss */
 html {
   box-sizing: border-box;
@@ -173,8 +175,9 @@ main {
   margin-right: 2.35765%;
   width: 31.76157%;
   margin-bottom: 25px;
-  height: 200px;
+  height: 228px;
   text-align: center;
+  background: #F9F9F9;
 }
 /* line 89, ../neat/grid/_span-columns.scss */
 .p-gallery .p-gal-item:last-child {
@@ -188,42 +191,42 @@ main {
 .p-gallery .p-gal-item:nth-child(3n+1) {
   clear: left;
 }
-/* line 51, ../sass/_layout.sass */
+/* line 52, ../sass/_layout.sass */
 .p-gallery .p-gal-item img {
   height: 100%;
 }
 
-/* line 54, ../sass/_layout.sass */
+/* line 55, ../sass/_layout.sass */
 .widget_categories {
   width: 100%;
   max-height: 1280px;
 }
-/* line 57, ../sass/_layout.sass */
+/* line 58, ../sass/_layout.sass */
 .widget_categories ul {
   display: table;
   margin: 0 auto;
   width: auto;
 }
-/* line 61, ../sass/_layout.sass */
+/* line 62, ../sass/_layout.sass */
 .widget_categories ul li {
   display: inline;
   padding: 0 10px;
 }
 
-/* line 65, ../sass/_layout.sass */
+/* line 66, ../sass/_layout.sass */
 .video-wrap {
   width: 85%;
   margin: 0 auto;
 }
 
-/* line 69, ../sass/_layout.sass */
+/* line 70, ../sass/_layout.sass */
 .video {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 25px;
   height: 0;
 }
-/* line 74, ../sass/_layout.sass */
+/* line 75, ../sass/_layout.sass */
 .video iframe {
   position: absolute;
   top: 0;
@@ -232,21 +235,21 @@ main {
   height: 100%;
 }
 
-/* line 81, ../sass/_layout.sass */
+/* line 82, ../sass/_layout.sass */
 .video-gallery {
   width: 100%;
 }
-/* line 83, ../sass/_layout.sass */
+/* line 84, ../sass/_layout.sass */
 .video-gallery img {
   width: 100%;
 }
-/* line 85, ../sass/_layout.sass */
+/* line 86, ../sass/_layout.sass */
 .video-gallery span {
   clear: both;
   line-height: 2.5;
 }
 
-/* line 89, ../sass/_layout.sass */
+/* line 90, ../sass/_layout.sass */
 .development {
   padding-bottom: 50px;
   margin-bottom: 50px;
@@ -263,27 +266,27 @@ main {
   content: "";
   display: table;
 }
-/* line 96, ../sass/_layout.sass */
+/* line 97, ../sass/_layout.sass */
 .development:last-child {
   border-bottom: 0;
 }
-/* line 99, ../sass/_layout.sass */
+/* line 100, ../sass/_layout.sass */
 .development .poster img {
   width: 100%;
 }
-/* line 101, ../sass/_layout.sass */
+/* line 102, ../sass/_layout.sass */
 .development .trailer {
   margin-bottom: 20px;
 }
 
-/* line 105, ../sass/_layout.sass */
+/* line 106, ../sass/_layout.sass */
 .wrap {
   display: table;
   vertical-align: bottom;
   height: inherit;
 }
 
-/* line 109, ../sass/_layout.sass */
+/* line 110, ../sass/_layout.sass */
 .bottom {
   display: table-cell;
   vertical-align: bottom;
@@ -342,4 +345,61 @@ ul, li {
 .development .trailer {
   width: 100%;
   iframe: 100%;
+}
+
+/* line 1, ../sass/_store.sass */
+.bc-plugin-products {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+/* line 20, ../bourbon/addons/_clearfix.scss */
+.bc-plugin-products::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 4, ../sass/_store.sass */
+.bc-plugin-products .product {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  text-align: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+/* line 89, ../neat/grid/_span-columns.scss */
+.bc-plugin-products .product:last-child {
+  margin-right: 0;
+}
+/* line 78, ../neat/grid/_omega.scss */
+.bc-plugin-products .product:nth-child(3n) {
+  margin-right: 0;
+}
+/* line 83, ../neat/grid/_omega.scss */
+.bc-plugin-products .product:nth-child(3n+1) {
+  clear: left;
+}
+/* line 10, ../sass/_store.sass */
+.bc-plugin-products .product:before {
+  font-family: fontAwesome;
+  content: "";
+  color: black;
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  font-size: 20px;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+/* line 21, ../sass/_store.sass */
+.bc-plugin-products .product:hover:before, .bc-plugin-products .product:active:before, .bc-plugin-products .product:focus:before {
+  opacity: 1;
+}
+/* line 24, ../sass/_store.sass */
+.bc-plugin-products .bc-plugin-title {
+  text-align: center;
+  clear: both;
 }
