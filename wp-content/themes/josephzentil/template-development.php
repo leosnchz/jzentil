@@ -18,12 +18,19 @@
 
             <div class="col-8 wrap">
                 <div class="bottom">
-                    <div class="trailer video">
-                        <iframe src="https://player.vimeo.com/video/<?php echo get_field('trailer_id') ?>?color=ffffff&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+                    <?php if( get_post_meta($post->ID, 'trailer_id', true) ) { ?>
+
+                        <div class="trailer video">
+                            <?php the_field("trailer_id"); ?>
+                        </div>
+
+                    <?php } ?>
                     <div class="content">
                         <h1><?php echo get_the_title(); ?></h1>
                         <p><?php the_field("devcontent"); ?></p>
+                        <p><?php the_field("genre"); ?></p>
+                        <p><span>Producers:</span> <?php the_field("producers"); ?></p>
+                        <p><span>Status:</span> <?php the_field("status"); ?></p>
                     </div>
                 </div>
             </div>

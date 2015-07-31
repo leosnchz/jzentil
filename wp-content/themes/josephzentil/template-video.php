@@ -13,7 +13,6 @@
         <div class="gal-item">
             <a href='<?php echo get_permalink(); ?>'>
                 <img src="<?=get_vimeo_thumb( 'http//vimeo.com/' + get_field('video_id') , 'thumbnail_large');?>" />
-                <span><?php the_title(); ?></span>
             </a>
         </div>
         <?php endwhile;?>
