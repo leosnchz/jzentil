@@ -33,7 +33,8 @@ get_sidebar('galleries'); ?>
     <ul class="photo-gallery">
     <?php while($photos->have_posts()) : $photos->the_post();
       $count ++;
-      $img_src = wp_get_attachment_image_src((int)get_post_meta(get_the_ID())['photo'][0], 'full')[0];
+      $img_meta = get_post_meta(get_the_ID())['photo'][0];
+      $img_src = wp_get_attachment_image_src((int)$img_meta, 'full')[0];
 
       ?>
       <li class="col-md-3">
