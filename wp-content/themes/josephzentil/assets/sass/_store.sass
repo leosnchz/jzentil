@@ -1,0 +1,26 @@
+.bc-plugin-products
+    @include outer-container()
+    margin-top: 40px
+    .product
+        @include span-columns(4)
+        @include omega(3n)
+        text-align: center
+        margin-bottom: 25px
+        position: relative
+        &:before
+            font-family: fontAwesome
+            content: "\f067"
+            color: black
+            position: absolute
+            top: 15px
+            left: 25px
+            font-size: 20px
+            opacity: 0
+            transition: all ease 0.5s
+        &:hover, &:active, &:focus
+            &:before
+                opacity: 1
+
+    .bc-plugin-title
+        text-align: center
+        clear: both
