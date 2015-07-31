@@ -28,8 +28,9 @@ get_sidebar('galleries'); ?>
     <div class="p-gallery">
     <?php while($photos->have_posts()) : $photos->the_post();
       $count ++;
-      $img_meta= get_post_meta(get_the_ID())['photo'];
-      $img_id = $img_meta[0];
+      $img_meta= get_post_meta(get_the_ID())
+      $img_arr = $img_meta['photo'];
+      $img_id = $img_arr[0];
       $img = wp_get_attachment_image_src((int)$img_id, 'full');
       $img_src = $img[0];
 
